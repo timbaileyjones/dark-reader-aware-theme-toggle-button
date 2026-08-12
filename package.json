@@ -1,0 +1,58 @@
+{
+  "name": "dark-reader-aware-theme-toggle-button",
+  "version": "0.1.0",
+  "description": "Dark mode toggle button that detects the Dark Reader extension and steps aside",
+  "author": "Tim Bailey-Jones <tim@timjones.com> (https://linuxtampa.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbaileyjones/dark-reader-aware-theme-toggle-button.git"
+  },
+  "homepage": "https://github.com/timbaileyjones/dark-reader-aware-theme-toggle-button#readme",
+  "bugs": {
+    "url": "https://github.com/timbaileyjones/dark-reader-aware-theme-toggle-button/issues"
+  },
+  "keywords": [
+    "dark-mode",
+    "dark-reader",
+    "theme-toggle",
+    "accessibility",
+    "mutation-observer"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./styles/toggle-button.css": "./styles/toggle-button.css",
+    "./global": "./dist/global.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "styles"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

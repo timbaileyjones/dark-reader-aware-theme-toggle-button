@@ -1,0 +1,26 @@
+/*
+ * Optional default button styles for dark-reader-aware-theme-toggle-button.
+ * Import in your app or link directly. Site theme colors stay in your CSS.
+ */
+
+.dra-theme-toggle {
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dra-theme-toggle:hover {
+  background: rgba(127, 127, 127, 0.15);
+}
+
+@media (max-width: 768px) {
+  .dra-theme-toggle {
+    margin-top: 0.5rem;
+  }
+}
