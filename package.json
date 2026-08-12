@@ -1,6 +1,6 @@
 {
   "name": "dark-reader-aware-theme-toggle-button",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Dark mode toggle button that detects the Dark Reader extension and steps aside",
   "author": "Tim Bailey-Jones <tim@bailey-jones.com> (https://linuxtampa.com)",
   "license": "MIT",
