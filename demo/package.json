@@ -1,0 +1,20 @@
+{
+  "name": "dark-reader-aware-theme-toggle-button-demo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Demo site proving dark-reader-aware-theme-toggle-button works",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify": "npm run build && node verify.mjs"
+  },
+  "dependencies": {
+    "dark-reader-aware-theme-toggle-button": "file:.."
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1",
+    "vite": "^5.4.0"
+  }
+}

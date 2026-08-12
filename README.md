@@ -19,6 +19,8 @@ Dark Reader uses different DOM signals depending on mode:
 
 This library checks all of them and watches for late injection via `MutationObserver`.
 
+I wrote up the background and design decisions behind this in more detail: [Building a Dark Mode Toggle That Plays Nice With Dark Reader](https://linuxtampa.com/blog/2026-03-18-dark-mode-and-dark-reader/).
+
 ## Install
 
 ```bash

@@ -1,0 +1,61 @@
+:root {
+  --bg-body: #ede4d8;
+  --text-primary: #2c1a0e;
+  --accent: #8a5a2b;
+}
+
+[data-theme="dark"] {
+  --bg-body: #0a0f0a;
+  --text-primary: #00ff9f;
+  --accent: #00b46e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.status {
+  font-weight: bold;
+  border: 1px dashed var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.api-demo {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--accent);
+}
+
+.api-demo button {
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+#api-output {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}

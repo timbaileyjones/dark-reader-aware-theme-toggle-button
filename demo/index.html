@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dark-reader-aware-theme-toggle-button — demo</title>
+
+  <!-- Apply saved theme before first paint (avoids flash of wrong theme) -->
+  <script type="module">
+    import { initThemeEarly } from 'dark-reader-aware-theme-toggle-button';
+    initThemeEarly();
+  </script>
+
+  <link rel="stylesheet" href="/src/site.css" />
+</head>
+<body>
+  <header>
+    <h1>dark-reader-aware-theme-toggle-button</h1>
+    <button class="dra-theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <span id="theme-toggle-text">Dark</span>
+    </button>
+  </header>
+
+  <main>
+    <p id="dr-status" class="status">Checking for Dark Reader…</p>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+    <p>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+      illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+      explicabo.
+    </p>
+
+    <section class="api-demo">
+      <h2>Lower-level API</h2>
+      <p>These buttons exercise the other exported functions directly.</p>
+      <button id="btn-get-theme">getTheme()</button>
+      <button id="btn-toggle-theme">toggleTheme()</button>
+      <button id="btn-is-dr-active">isDarkReaderActive()</button>
+      <pre id="api-output">—</pre>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
