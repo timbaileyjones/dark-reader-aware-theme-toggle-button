@@ -47,12 +47,12 @@ Works with Vite, webpack, Rollup, esbuild, Parcel, and similar tools.
 
 ### Static HTML via CDN
 
-For plain HTML with no build step, load published files from a CDN. **Pin the version** in production (replace `0.1.3` with the version you want):
+For plain HTML with no build step, load published files from a CDN. **Pin the version** in production (replace `0.1.4` with the version you want):
 
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.3/styles/toggle-button.css"
+  href="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.4/styles/toggle-button.css"
 >
 
 <!-- Your site CSS: define :root and [data-theme="dark"] variables -->
@@ -61,7 +61,7 @@ For plain HTML with no build step, load published files from a CDN. **Pin the ve
   <span id="theme-toggle-text">Dark</span>
 </button>
 
-<script src="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.3/dist/global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.4/dist/global.js"></script>
 <script>
   DarkReaderAwareThemeToggle.mount({
     button: '#theme-toggle',
@@ -73,8 +73,8 @@ For plain HTML with no build step, load published files from a CDN. **Pin the ve
 [jsDelivr](https://www.jsdelivr.com/package/npm/dark-reader-aware-theme-toggle-button) and [unpkg](https://unpkg.com/dark-reader-aware-theme-toggle-button/) both mirror npm. Equivalent unpkg URLs:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/dark-reader-aware-theme-toggle-button@0.1.3/styles/toggle-button.css">
-<script src="https://unpkg.com/dark-reader-aware-theme-toggle-button@0.1.3/dist/global.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dark-reader-aware-theme-toggle-button@0.1.4/styles/toggle-button.css">
+<script src="https://unpkg.com/dark-reader-aware-theme-toggle-button@0.1.4/dist/global.js"></script>
 ```
 
 ### Static site with `npm install` (copy at build time)
@@ -175,7 +175,7 @@ Apply the saved theme before the first paint.
 **Static HTML (CDN or copied IIFE)** — blocking script in `<head>` before CSS:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.3/dist/global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dark-reader-aware-theme-toggle-button@0.1.4/dist/global.js"></script>
 <script>DarkReaderAwareThemeToggle.initThemeEarly();</script>
 ```
 

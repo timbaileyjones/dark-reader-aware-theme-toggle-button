@@ -12,7 +12,9 @@ export default defineConfig([
   {
     entry: { global: 'src/global.ts' },
     format: ['iife'],
-    globalName: 'DarkReaderAwareThemeToggle',
+    // Do not set globalName: tsup would assign the module namespace
+    // ({ default: api }) to that var and overwrite window.DarkReaderAwareThemeToggle
+    // that src/global.ts sets to the real API. Window assignment is the contract.
     outDir: 'dist',
     target: 'es2020',
     minify: true,
