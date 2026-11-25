@@ -108,6 +108,18 @@ describe('theme', () => {
     expect(toggleTheme()).toBe('light');
   });
 
+  it('follows the system preference when asked', () => {
+    vi.stubGlobal('window', Object.assign(window, { matchMedia: (q: string) => ({ matches: q.includes('dark') }) }));
+    expect(getTheme({ respectSystemPreference: true })).toBe('dark');
+    expect(getTheme()).toBe('light');
+  });
+
+  it('falls back to light when matchMedia is unavailable', () => {
+    Object.defineProperty(window, 'matchMedia', { value: undefined, configurable: true });
+    expect(getTheme({ respectSystemPreference: true })).toBe('light');
+    expect(initThemeEarly({ respectSystemPreference: true })).toBe('light');
+  });
+
   it('initThemeEarly applies saved theme', () => {
     window.localStorage.setItem('theme', 'dark');
     initThemeEarly();

@@ -15,8 +15,9 @@ function getStorage(doc: Document): Storage | null {
   return doc.defaultView?.localStorage ?? null;
 }
 
+/** matchMedia is missing in some environments (jsdom, old embedded webviews): treat as light. */
 function prefersDark(doc: Document): boolean {
-  return doc.defaultView?.matchMedia('(prefers-color-scheme: dark)').matches ?? false;
+  return doc.defaultView?.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false;
 }
 
 /** Read saved theme, optionally falling back to system preference. */
